@@ -21,7 +21,7 @@ namespace Choose.ConsoleApp
                 options.Add(option);
             }
 
-            var random = RandomNumber.Between(0, options.Count);
+            var random = RandomNumber.Between(0, options.Count-1);
 
             Console.WriteLine("Deine Wahl fällt auf:");
             Console.WriteLine(options[random]);
