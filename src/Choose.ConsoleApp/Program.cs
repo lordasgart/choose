@@ -21,11 +21,27 @@ namespace Choose.ConsoleApp
                 options.Add(option);
             }
 
-            var random = RandomNumber.Between(0, options.Count-1);
+            if (options.Count < 2)
+            {
+                var random = RandomNumber.Between(0, 1);
 
-            Console.WriteLine("Deine Wahl fällt auf:");
-            Console.WriteLine(options[random]);
-            
+                if (random == 1)
+                {
+                    Console.WriteLine("Ja.");
+                }
+                else
+                {
+                    Console.WriteLine("Nein.");
+                }
+            }
+            else
+            {
+                var random = RandomNumber.Between(0, options.Count - 1);
+
+                Console.WriteLine("Deine Wahl fällt auf:");
+                Console.WriteLine(options[random]);
+            }
+
             Console.ReadLine();
         }
     }
