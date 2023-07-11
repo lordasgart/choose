@@ -7,7 +7,7 @@ namespace Choose.ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Gib deine Optionen mit ENTER ein:");
+            Console.Write("private bool Options => ");
 
             List<string> options = new List<string>();
             string option = string.Empty;
@@ -27,19 +27,19 @@ namespace Choose.ConsoleApp
 
                 if (random == 1)
                 {
-                    Console.WriteLine("Ja.");
+                    Console.Write("true");
                 }
                 else
                 {
-                    Console.WriteLine("Nein.");
+                    Console.Write("false");
                 }
             }
             else
             {
                 var random = RandomNumber.Between(0, options.Count - 1);
 
-                Console.WriteLine("Deine Wahl fällt auf:");
-                Console.WriteLine(options[random]);
+                Console.Write(" => ");
+                Console.Write(options[random]);
             }
 
             Console.ReadLine();
