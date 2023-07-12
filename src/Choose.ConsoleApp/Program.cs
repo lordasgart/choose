@@ -7,7 +7,7 @@ namespace Choose.ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.Write("private bool Options => ");
+            Console.Write("Solar system status: ");
 
             List<string> options = new List<string>();
             string option = string.Empty;
@@ -27,11 +27,11 @@ namespace Choose.ConsoleApp
 
                 if (random == 1)
                 {
-                    Console.Write("true");
+                    Console.Write("ok");
                 }
                 else
                 {
-                    Console.Write("false");
+                    Console.Write("nok");
                 }
             }
             else
