@@ -23,6 +23,15 @@ namespace Choose.ConsoleApp
                 {
                     break;
                 }
+                if (option.Contains(" "))
+                {
+                    var lineoptions = option.Split(" ");
+                    foreach (var lineoption in lineoptions)
+                    {
+                        options.Add(lineoption);
+                    }
+                    break;
+                }
                 options.Add(option);
             }
 
