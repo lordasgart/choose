@@ -7,7 +7,12 @@ namespace Choose.ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.Write("Solar system status: ");
+            string[] trues = { "1", "true", "True", "TRUE", "yes", "Yes", "YES", "Ja", "ja", "JA", "ok", "OK" };
+            string[] falses = { "0", "false", "False", "FALSE", "no", "No", "NO", "Nein", "nein", "NEIN", "nok", "NOK" };
+
+            string[] messages = { "Solar system status", "Answer", "Result", "Status", "Code" };
+
+            Console.Write($"{messages[RandomNumber.Between(0, messages.Length-1)]}: ");
 
             List<string> options = new List<string>();
             string option = string.Empty;
@@ -27,18 +32,18 @@ namespace Choose.ConsoleApp
 
                 if (random == 1)
                 {
-                    Console.Write("ok");
+                    Console.Write($"{trues[RandomNumber.Between(0, trues.Length-1)]}");
                 }
                 else
                 {
-                    Console.Write("nok");
+                    Console.Write($"{falses[RandomNumber.Between(0, trues.Length-1)]}");
                 }
             }
             else
             {
                 var random = RandomNumber.Between(0, options.Count - 1);
 
-                Console.Write(" => ");
+                Console.Write("");
                 Console.Write(options[random]);
             }
 
